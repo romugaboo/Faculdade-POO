@@ -10,4 +10,9 @@ public class Main {
 		sc.close();
 		getFunc(z);
 	}
+
+	private static void getFunc(String z) {
+		// TODO Auto-generated method stub
+		
+	}
 }
