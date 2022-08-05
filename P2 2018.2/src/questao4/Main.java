@@ -21,9 +21,8 @@ public class Main {
 		Iterator<String> it = mapa.keySet().iterator();
 		while (it.hasNext()) {
 			String key = (String) it.next();
-			if (key.startsWith("A")) {
+			if (key.startsWith("A"))
 				d += (int) mapa.get(key);
-			}
 		}
 		return d;
 	}
