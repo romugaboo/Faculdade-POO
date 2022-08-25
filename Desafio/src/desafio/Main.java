@@ -26,15 +26,16 @@ public class Main {
 		System.out.println(m.get(i));
 		
 		System.out.println(calcularSoma(m));
-		//System.out.println(calcularMedia(m));
+		System.out.println(calcularMedia(m));
 	}
 	
 	public static double calcularSoma(Map<String, Imovel> m) {
 		double d = 0;
 		Iterator it = m.values().iterator();
 		while(it.hasNext()) {
-			if (((Imovel) it.next()).isVendaOuAluguel() == true)
-				d = d + ((Imovel) it.next()).getValor();
+			Imovel i = (Imovel) it.next();
+			if (i.isVendaOuAluguel())
+				d = d + (i.getValor());
 		}
 		return d;
 	}
@@ -44,8 +45,9 @@ public class Main {
 		int c = 0;
 		Iterator it = m.values().iterator();
 		while(it.hasNext()) {
-			if (((Imovel) it.next()).isVendaOuAluguel() == false) {
-				d = d + ((Imovel) it.next()).getValor();
+			Imovel i = (Imovel) it.next();
+			if (!i.isVendaOuAluguel()) {
+				d = d + i.getValor();
 				c++;
 			}
 		}
